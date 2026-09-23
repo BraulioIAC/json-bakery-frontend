@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FAF6F0;
+}
+/* Fuentes */
+.indie-flower-regular-x-large {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+}
+.indie-flower-regular-large {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+}
