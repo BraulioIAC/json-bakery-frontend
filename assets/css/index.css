@@ -1,10 +1,65 @@
+:root{
+  --white: #FAF6F0;
+  --white-2: #FFF9EC;
+  --brown: #3B1F10;
+  --golden: #C47F31;
+  --yellow: #FFD966;
+  --pink-1: #FF8FAF;
+  --pink-2: #F15280;
+  --violet: #F5EBFF;
+}
+
+*{
+  background-color: var(--white-2) !important;
+  padding: 0;
+}
 body{
     margin: 0;
     padding: 0;
-    background-color: #FAF6F0;
+}
+#introduction{
+  color: var(--brown);
+  height: 90vh;
+  /* padding: 15vh 0vh 15vh 15vw; */
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+#introduccion-1{
+  width: 30%;
+}
+/* #introduccion-2{
+  padding-left: 200px;
+} */
+#introduccion-2 img{
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid var(--brown);
+  box-shadow: 3px 3px var(--pink-1);
+}
+#introduction-button-section ul{
+  margin: 0;
+  padding: 10px 0;
+  gap: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+.button-1, .button-2{
+  padding: 10px 15px;
+  border-radius: 25px;
+  border-color: var(--brown);
+}
+.button-1{
+  background-color: var(--brown) !important;
+  color: var(--white-2);
+  box-shadow: 3px 3px var(--pink-1);
 }
 /* Fuentes */
-.indie-flower-regular-x-large {
+/* .indie-flower-regular-x-large {
   font-family: "Indie Flower", cursive;
   font-weight: 400;
   font-style: normal;
@@ -16,3 +71,9 @@ body{
   font-style: normal;
   font-size: large;
 }
+.indie-flower-regular-mediuim {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+} */
