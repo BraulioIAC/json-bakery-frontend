@@ -12,14 +12,16 @@
 
 *{
   background-color: var(--white-2) !important;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body{
+    /* background-color: var(--white-2) !important; */
     margin: 0;
     padding: 0;
 }
-#introduction{
+.principal{
   color: var(--brown);
   height: 90vh;
   /* padding: 15vh 0vh 15vh 15vw; */
@@ -29,15 +31,17 @@ body{
   justify-content: center;
   align-items: center;
 }
-#introduccion-1{
+
+.principal-1{
   width: 30%;
 }
 
- #introduccion-2{
+.principal-2{
   display: flex;
   flex-direction: column;
  }
-#introduccion-2 img{
+ 
+.principal-2 img{
   height: 500px;
   width: auto;
   object-fit: cover;
@@ -81,7 +85,7 @@ body{
   transform: rotate(-4deg);
 }
 
-#introduction-button-section ul{
+.introduction-button-section ul{
   margin: 0;
   padding: 10px 0;
   gap: 1vw;
@@ -99,6 +103,35 @@ body{
   background-color: var(--brown) !important;
   color: var(--white-2);
   box-shadow: 3px 3px var(--pink-1);
+}
+
+.ticker{
+  margin-top: 8vh;
+  overflow: hidden;
+  background-color: var(--pink-1) !important;
+  border: 3px solid var(--brown);
+  padding: 10px;
+}
+
+.ticker div, .ticker span, .ticker b{
+  background-color: inherit !important;
+}
+
+.ticker > div{
+  width: max-content;
+  text-transform: capitalize;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker > div > span, .ticker > div{
+  display: flex;
+  gap: 20px;
+}
+
+@keyframes ticker {
+  100%{
+    transform: translateX(-50%);
+  }
 }
 /* Fuentes */
 /* .indie-flower-regular-x-large {
