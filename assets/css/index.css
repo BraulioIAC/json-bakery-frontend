@@ -7,11 +7,13 @@
   --pink-1: #FF8FAF;
   --pink-2: #F15280;
   --violet: #F5EBFF;
+  --violet-2: #CBB8F5;
 }
 
 *{
   background-color: var(--white-2) !important;
   padding: 0;
+  margin: 0;
 }
 body{
     margin: 0;
@@ -30,17 +32,55 @@ body{
 #introduccion-1{
   width: 30%;
 }
-/* #introduccion-2{
-  padding-left: 200px;
-} */
+
+ #introduccion-2{
+  display: flex;
+  flex-direction: column;
+ }
 #introduccion-2 img{
-  height: 400px;
+  height: 500px;
   width: auto;
   object-fit: cover;
-  border-radius: 20px;
-  border: 2px solid var(--brown);
-  box-shadow: 3px 3px var(--pink-1);
+  border-radius: 48% 52% 42% 58% / 57% 38% 62% 43%;
+  transform: rotate(-3deg);
+  border: 3px solid var(--brown);
+  box-shadow: 10px 5px var(--violet-2);
 }
+
+.sticker-round{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  top: 90px;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  align-self: flex-end;
+  background-color: var(--yellow) !important;
+  border-radius: 50%;
+  border: 2px solid var(--brown);
+  box-shadow: 3px 3px var(--brown);
+  text-align: center;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 750;
+  transform: rotate(6deg);
+}
+
+.sticker-note{
+  position: relative;
+  top: -20px;
+  border-radius: 5px;
+  border: 2px solid;
+  box-shadow: 3px 3px var(--brown);
+  padding: 7px 15px;
+  align-self: flex-start;
+  text-align: center;
+  transform: rotate(-4deg);
+}
+
 #introduction-button-section ul{
   margin: 0;
   padding: 10px 0;
@@ -48,11 +88,13 @@ body{
   display: flex;
   flex-direction: row;
 }
+
 .button-1, .button-2{
   padding: 10px 15px;
   border-radius: 25px;
   border-color: var(--brown);
 }
+
 .button-1{
   background-color: var(--brown) !important;
   color: var(--white-2);
