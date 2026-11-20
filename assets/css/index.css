@@ -207,6 +207,136 @@ img {
   }
 }
 
+/* ---------- 3. Navbar ---------- */
+.site-nav {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-nav-link-padding-x: 0;
+  --bs-navbar-color: var(--cocoa);
+  --bs-navbar-hover-color: var(--cocoa);
+  --bs-navbar-active-color: var(--cocoa);
+  min-height: var(--nav-h);
+  border-bottom: 2px solid var(--cocoa);
+  background: var(--cream);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.brand img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid var(--cocoa);
+  border-radius: 50%;
+  background: #fff;
+  object-fit: cover;
+}
+
+.site-nav .navbar-nav {
+  gap: 1.25rem;
+}
+
+.site-nav .nav-link {
+  position: relative;
+  align-self: flex-start;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.site-nav .nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.1rem;
+  left: 0;
+  height: 2px;
+  background: var(--hot-pink);
+  content: "";
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.order-button {
+  align-items: center;
+  border: 2px solid var(--cocoa);
+  border-radius: 999px;
+  background: var(--butter);
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 var(--cocoa);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-button:hover {
+  box-shadow: 1px 1px 0 var(--cocoa);
+  transform: translate(2px, 2px);
+}
+
+.site-nav .navbar-toggler {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid var(--cocoa);
+  border-radius: 50%;
+  background: var(--pink);
+  padding: 0.7rem;
+}
+
+.site-nav .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--butter);
+}
+
+.site-nav .navbar-toggler span {
+  display: block;
+  height: 2px;
+  margin: 0.28rem 0;
+  background: var(--cocoa);
+}
+
+/* Menú lateral en móvil */
+.site-nav .offcanvas {
+  border-left: 2px solid var(--cocoa);
+  background: var(--butter);
+}
+
+.site-nav .offcanvas-header {
+  border-bottom: 2px solid var(--cocoa);
+}
+
+/* Navbar horizontal (md ≥ 768px) */
+@media (min-width: 768px) {
+  .site-nav .navbar-nav {
+    gap: 2rem;
+  }
+
+  .site-nav .nav-link {
+    font-size: 0.75rem;
+  }
+
+  .site-nav .nav-link::after {
+    bottom: 0;
+  }
+}
+
 /* ---------- 12. Accesibilidad ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
