@@ -131,6 +131,8 @@
     }
   });
 
+  document.getElementById("anio").textContent = new Date().getFullYear();
+
   /* ---------- 4. Menú móvil ---------- */
   // En móvil, al tocar un enlace se cierra el menú y luego se hace scroll a la sección.
   const offcanvasEl = document.getElementById("menuOffcanvas");
