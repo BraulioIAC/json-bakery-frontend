@@ -1,154 +1,220 @@
-:root{
-  --white: #FAF6F0;
-  --white-2: #FFF9EC;
-  --brown: #3B1F10;
-  --golden: #C47F31;
-  --yellow: #FFD966;
-  --pink-1: #FF8FAF;
-  --pink-2: #F15280;
-  --violet: #F5EBFF;
-  --violet-2: #CBB8F5;
+/* =========================================================
+   Burri Brownies — estilos
+   1. Variables y base
+   2. Elementos compartidos (títulos, kicker, botones)
+   3. Navbar
+   4. Hero
+   5. Ticker
+   6. Destacados
+   7. Catálogo
+   8. Nosotros / proceso
+   9. Opiniones
+   10. Contacto
+   11. Footer
+   12. Accesibilidad
+   Cada sección incluye sus propias media queries.
+   Breakpoints = los de Bootstrap: sm 576 · md 768 · lg 992 · xl 1200
+   ========================================================= */
+
+/* ---------- 1. Variables y base ---------- */
+:root {
+  --cream: #fff9ec;
+  --cocoa: #3b1f10;
+  --muted: #76594d;
+  --pink: #ff8faf;
+  --hot-pink: #f15280;
+  --butter: #ffd966;
+  --mint: #b9e6d0;
+  --lilac: #cbb8f5;
+  --violet-soft: #f5ebff;
+  --golden: #c47f31;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --nav-h: 5rem;
+
+  /* Bootstrap usa estas variables para body */
+  --bs-body-bg: var(--cream);
+  --bs-body-color: var(--cocoa);
+  --bs-body-font-family: var(--font-body);
+  --bs-heading-color: inherit;
 }
 
-*{
-  background-color: var(--white-2) !important;
-  box-sizing: border-box;
-  padding: 0;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+body {
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  overflow-x: clip; /* evita scroll horizontal por elementos rotados */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--hot-pink);
+  outline-offset: 3px;
+}
+
+.section-pad {
+  padding-block: 5rem;
+}
+
+/* Colores de fondo para tarjetas */
+.tone-pink { background: var(--pink); }
+.tone-butter { background: var(--butter); }
+.tone-mint { background: var(--mint); }
+.tone-lilac { background: var(--lilac); }
+
+/* ---------- 2. Elementos compartidos ---------- */
+.display-title {
   margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
 }
-body{
-    /* background-color: var(--white-2) !important; */
-    margin: 0;
-    padding: 0;
+
+.display-title em {
+  color: var(--hot-pink);
+  font-weight: 500;
 }
-.principal{
-  color: var(--brown);
-  height: 90vh;
-  /* padding: 15vh 0vh 15vh 15vw; */
+
+.eyebrow,
+.kicker {
   display: flex;
-  flex-direction: row;
-  gap: 10vw;
-  justify-content: center;
   align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  color: var(--hot-pink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.principal-1{
-  width: 30%;
+.eyebrow span {
+  display: block;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: var(--pink);
 }
 
-.principal-2{
+.kicker-light {
+  color: var(--butter);
+}
+
+.section-heading {
   display: flex;
   flex-direction: column;
- }
- 
-.principal-2 img{
-  height: 500px;
-  width: auto;
-  object-fit: cover;
-  border-radius: 48% 52% 42% 58% / 57% 38% 62% 43%;
-  transform: rotate(-3deg);
-  border: 3px solid var(--brown);
-  box-shadow: 10px 5px var(--violet-2);
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.sticker-round{
+.section-heading h2 {
+  font-size: clamp(2.75rem, 6vw, 5rem);
+}
+
+.section-heading > p {
+  max-width: 27rem;
   margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-  top: 90px;
-  width: 100px;
-  height: 100px;
-  display: grid;
-  place-items: center;
-  align-self: flex-end;
-  background-color: var(--yellow) !important;
-  border-radius: 50%;
-  border: 2px solid var(--brown);
-  box-shadow: 3px 3px var(--brown);
-  text-align: center;
-  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+/* Botones */
+.btn-bb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border: 2px solid var(--cocoa);
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 750;
-  transform: rotate(6deg);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.sticker-note{
-  position: relative;
-  top: -20px;
-  border-radius: 5px;
-  border: 2px solid;
-  box-shadow: 3px 3px var(--brown);
-  padding: 7px 15px;
-  align-self: flex-start;
-  text-align: center;
-  transform: rotate(-4deg);
+.btn-bb svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
-.introduction-button-section ul{
-  margin: 0;
-  padding: 10px 0;
-  gap: 1vw;
-  display: flex;
-  flex-direction: row;
+.btn-bb:hover {
+  transform: translateY(-3px) rotate(-1deg);
 }
 
-.button-1, .button-2{
-  padding: 10px 15px;
-  border-radius: 25px;
-  border-color: var(--brown);
+.btn-bb-primary {
+  background: var(--cocoa);
+  color: var(--cream);
+  box-shadow: 4px 4px 0 var(--pink);
 }
 
-.button-1{
-  background-color: var(--brown) !important;
-  color: var(--white-2);
-  box-shadow: 3px 3px var(--pink-1);
+.btn-bb-primary:hover {
+  color: var(--cream);
 }
 
-.ticker{
-  margin-top: 8vh;
-  overflow: hidden;
-  background-color: var(--pink-1) !important;
-  border: 3px solid var(--brown);
-  padding: 10px;
+.btn-bb-secondary {
+  background: transparent;
 }
 
-.ticker div, .ticker span, .ticker b{
-  background-color: inherit !important;
+.btn-bb-pink {
+  background: var(--pink);
+  color: var(--cocoa);
+  box-shadow: 4px 4px 0 var(--cream);
 }
 
-.ticker > div{
-  width: max-content;
-  text-transform: capitalize;
-  animation: ticker 28s linear infinite;
+.btn-bb-outline-light {
+  border-color: var(--cream);
+  color: var(--cream);
 }
 
-.ticker > div > span, .ticker > div{
-  display: flex;
-  gap: 20px;
+.btn-bb-outline-light:hover {
+  color: var(--cream);
 }
 
-@keyframes ticker {
-  100%{
-    transform: translateX(-50%);
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: 7rem;
+  }
+
+  .section-heading {
+    flex-direction: row;
   }
 }
-/* Fuentes */
-/* .indie-flower-regular-x-large {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: x-large;
+
+/* ---------- 12. Accesibilidad ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
-.indie-flower-regular-large {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: large;
-}
-.indie-flower-regular-mediuim {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: medium;
-} */
