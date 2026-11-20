@@ -81,3 +81,22 @@ const detalles = {
     descripcion: "Pan de chocolate húmedo y esponjoso.",
   },
 };
+
+// TODO: reseñas de EJEMPLO. Reemplázalas por reseñas reales antes de publicar.
+const testimonios = [
+  {
+    nombre: "Mariana G.",
+    lugar: "ESCA Tepepan",
+    texto: "El brownie de Oreo desapareció antes de que pudiera tomarle foto. Eso lo dice todo.",
+  },
+  {
+    nombre: "Diego R.",
+    lugar: "ESCA Tepepan",
+    texto: "Pedí cupcakes de elote para un cumpleaños y no sobró ni uno. Ya tengo proveedor oficial.",
+  },
+  {
+    nombre: "Fernanda L.",
+    lugar: "Ciudad de México",
+    texto: "La galleta red velvet es mi antojo de cada semana. Llegan bien empacadas y bonitas.",
+  },
+];

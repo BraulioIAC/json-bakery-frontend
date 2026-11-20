@@ -963,6 +963,86 @@ img {
   }
 }
 
+/* ---------- 9. Opiniones ---------- */
+.polaroid {
+  width: min(100%, 15rem);
+  margin: 0;
+  border: 2px solid var(--cocoa);
+  background: #fff;
+  padding: 0.6rem 0.6rem 0;
+  box-shadow: 6px 6px 0 var(--lilac);
+  transform: rotate(3deg);
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.polaroid figcaption {
+  padding: 0.6rem 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.testimonial {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 16rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid var(--cocoa);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 0 var(--cocoa);
+}
+
+.quote-mark {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.testimonial > p {
+  margin: 1.5rem 0 2rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.testimonial footer span {
+  opacity: 0.7;
+}
+
+@media (min-width: 992px) {
+  .testimonial-grid .col:nth-child(2) .testimonial {
+    transform: translateY(1rem) rotate(1deg);
+  }
+
+  .testimonial-grid .col:nth-child(3) .testimonial {
+    transform: rotate(-1deg);
+  }
+
+  .polaroid {
+    margin-right: 2rem;
+  }
+}
+
 /* ---------- 12. Accesibilidad ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,

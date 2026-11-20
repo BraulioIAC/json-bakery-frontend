@@ -102,6 +102,23 @@
   renderFiltros();
   renderProductos();
 
+  /* ---------- 2. Opiniones ---------- */
+  const testimoniosEl = document.getElementById("testimonial-grid");
+  const tonosOpinion = ["tone-pink", "tone-butter", "tone-mint"];
+
+  testimoniosEl.innerHTML = testimonios
+    .map(
+      (t, i) => `
+      <div class="col">
+        <article class="testimonial ${tonosOpinion[i % tonosOpinion.length]}">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>${t.texto}</p>
+          <footer><strong>${t.nombre}</strong><span>${t.lugar}</span></footer>
+        </article>
+      </div>`
+    )
+    .join("");
+
   /* ---------- 4. Menú móvil ---------- */
   // En móvil, al tocar un enlace se cierra el menú y luego se hace scroll a la sección.
   const offcanvasEl = document.getElementById("menuOffcanvas");
