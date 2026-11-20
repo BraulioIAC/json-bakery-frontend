@@ -188,15 +188,6 @@ img {
   box-shadow: 4px 4px 0 var(--cream);
 }
 
-.btn-bb-outline-light {
-  border-color: var(--cream);
-  color: var(--cream);
-}
-
-.btn-bb-outline-light:hover {
-  color: var(--cream);
-}
-
 @media (min-width: 768px) {
   .section-pad {
     padding-block: 7rem;

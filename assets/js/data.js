@@ -101,9 +101,8 @@ const testimonios = [
   },
 ];
 
-// Enlaces de contacto. Déjalos vacíos ("") si todavía no existen:
-// los botones apuntarán a la sección de contacto.
+// Enlaces de contacto. Cada botón con data-contacto="<clave>" toma su URL de aquí.
+// Si una clave queda vacía (""), sus botones apuntan a la sección de contacto.
 const contacto = {
   instagram: "https://www.instagram.com/burri_brownies",
-  whatsapp: "", // ej. "https://wa.me/5215512345678"
 };
