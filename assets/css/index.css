@@ -545,6 +545,42 @@ img {
   }
 }
 
+/* ---------- 5. Ticker ---------- */
+.ticker {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-block: 2px solid var(--cocoa);
+  background: var(--pink);
+  padding: 0.85rem 0;
+  transform: rotate(-1deg) scale(1.02);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker span {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ticker b {
+  margin: 0 1.3rem;
+  font-family: var(--font-body);
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* ---------- 12. Accesibilidad ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
