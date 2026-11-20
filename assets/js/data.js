@@ -104,6 +104,6 @@ const testimonios = [
 // Enlaces de contacto. Déjalos vacíos ("") si todavía no existen:
 // los botones apuntarán a la sección de contacto.
 const contacto = {
-  instagram: "", // ej. "https://instagram.com/burribrownies"
+  instagram: "https://www.instagram.com/burri_brownies",
   whatsapp: "", // ej. "https://wa.me/5215512345678"
 };
