@@ -100,3 +100,10 @@ const testimonios = [
     texto: "La galleta red velvet es mi antojo de cada semana. Llegan bien empacadas y bonitas.",
   },
 ];
+
+// Enlaces de contacto. Déjalos vacíos ("") si todavía no existen:
+// los botones apuntarán a la sección de contacto.
+const contacto = {
+  instagram: "", // ej. "https://instagram.com/burribrownies"
+  whatsapp: "", // ej. "https://wa.me/5215512345678"
+};

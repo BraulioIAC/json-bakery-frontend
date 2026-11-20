@@ -119,6 +119,18 @@
     )
     .join("");
 
+  /* ---------- 3. Contacto y año ---------- */
+  document.querySelectorAll("[data-contacto]").forEach((enlace) => {
+    const url = contacto[enlace.dataset.contacto];
+    if (url) {
+      enlace.href = url;
+      enlace.target = "_blank";
+      enlace.rel = "noopener";
+    } else {
+      enlace.href = "#contacto";
+    }
+  });
+
   /* ---------- 4. Menú móvil ---------- */
   // En móvil, al tocar un enlace se cierra el menú y luego se hace scroll a la sección.
   const offcanvasEl = document.getElementById("menuOffcanvas");
